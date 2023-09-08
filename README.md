@@ -9,7 +9,6 @@ A aplicação permite o simples cadastro de usuários (funcionários), o cadastr
 Para utilizá-la, basta executar os scripts do arquivo 'Dump20230806.sql' para criar o banco e popular dados de iniciais de usuários, fazer o build através de 'maven clean package' e executar o JAR gerado na pasta target.
 * O jar with_dependencies contem todas as dependências do projeto. 
 
-*Usuários iniciais da aplicação
-username | senha 
-admin    | admin
-vendedor | vendedor
+* Usuários iniciais da aplicação
+username : admin | senha : admin 
+username: vendedor | senha: vendedor
