@@ -6,13 +6,12 @@
 <hibernate-configuration>
     <session-factory>
         <!-- Database connection details -->
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost/sisotica</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">MYsqlD12**</property>
+        <property name="hibernate.connection.password">root</property>
         <!-- Set dialect for the database -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <mapping class="com.projeto.sisotica.model.Cliente"/>
     </session-factory>
-    
 </hibernate-configuration>
