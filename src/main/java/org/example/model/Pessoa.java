@@ -5,11 +5,7 @@
 package org.example.model;
 
 import java.util.Calendar;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 /**
  * @author Davi Martins
@@ -23,7 +19,7 @@ public abstract class Pessoa {
     private Integer id;
     
     private String nome;
-    
+
     private String cpf;
     
     @Column(name = "data_nascimento")

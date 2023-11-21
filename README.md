@@ -11,4 +11,3 @@ Para utilizá-la, basta executar os scripts do arquivo 'Dump20230806.sql' para c
 
 * Usuários iniciais da aplicação
 username : admin | senha : admin 
-username: vendedor | senha: vendedor
