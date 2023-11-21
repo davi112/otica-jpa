@@ -5,7 +5,11 @@
 package org.example.model;
 
 import java.util.Calendar;
-import javax.persistence.*;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Column;
+import javax.persistence.GenerationType;
 
 /**
  * @author Davi Martins
