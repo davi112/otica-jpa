@@ -11,7 +11,6 @@ import org.example.model.Receita;
 import org.example.view.ListagemReceitasForm;
 import org.example.view.ReceitasPorClienteForm;
 
-import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.util.List;
