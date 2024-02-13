@@ -27,22 +27,16 @@ public class Funcionario extends Pessoa implements Serializable{
     private Calendar dataAdmissao;
     
     private Cargo cargo;
-    
-       // @ManyToOne(fetch = FetchType.LAZY)
-    @OneToOne
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
 
     public Funcionario(){
         
     }
 
-    public Funcionario(double salario, Calendar dataAdmissao, Cargo cargo, Usuario usuario, Integer id, String nome, String cpf, Calendar dataNascimento, String telefone, String email) {
+    public Funcionario(double salario, Calendar dataAdmissao, Cargo cargo, Integer id, String nome, String cpf, Calendar dataNascimento, String telefone, String email) {
         super(id, nome, cpf, dataNascimento, telefone, email);
         this.salario = salario;
         this.dataAdmissao = dataAdmissao;
         this.cargo = cargo;
-        this.usuario = usuario;
     }
 
 
@@ -79,18 +73,9 @@ public class Funcionario extends Pessoa implements Serializable{
         this.dataAdmissao = dataAdmissao;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }   
-
     @Override
     public String toString() {
-        return this.getNome();// Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        return this.getNome();
     }
-    
-    
+
 }

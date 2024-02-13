@@ -4,13 +4,7 @@
  */
 package org.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 
 /**
@@ -29,9 +23,10 @@ public class Usuario {
     private String login;
     
     private String senha;
-    
-    @OneToOne(mappedBy = "usuario")
-    private Funcionario pessoaFuncionario;
+
+    @OneToOne
+    @JoinColumn(name="id_funcionario")
+    private Funcionario funcionario;
     
     public Integer getId() {
         return id;
@@ -57,11 +52,11 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Funcionario getPessoaFuncionario() {
-        return pessoaFuncionario;
+    public Funcionario getFuncionario() {
+        return funcionario;
     }
 
-    public void setPessoaFuncionario(Funcionario pessoaFuncionario) {
-        this.pessoaFuncionario = pessoaFuncionario;
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
     } 
 }

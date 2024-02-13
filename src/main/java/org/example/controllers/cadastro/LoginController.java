@@ -84,7 +84,7 @@ public class LoginController extends AbstractController<LoginForm> implements Lo
      */
     public void redirect(Usuario usuario) {
         view.dispose();
-        new PainelFuncionarioController(usuario.getPessoaFuncionario());
+        new PainelFuncionarioController(usuario.getFuncionario());
     }
 
 }

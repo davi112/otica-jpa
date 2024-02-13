@@ -110,7 +110,7 @@ public class CadastroFuncionarioController extends AbstractController<Funcionari
             } else {
                 f.setCargo(Cargo.VENDEDOR);
             }
-            f.setCpf(view.getTxtCpf1().getText());
+            f.setCpf(view.getTxtCpf1().getText().replaceAll("[.-]", ""));
             f.setDataAdmissao(DataUtils.parse(view.getTxtDataAdmissao().getText()));
             f.setDataNascimento(DataUtils.parse(view.getTxtDataNascimento1().getText()));
             f.setTelefone(view.getTxtTelefone().getText());
