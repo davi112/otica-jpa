@@ -11,6 +11,7 @@ import org.example.model.Receita;
 import org.example.view.ListagemReceitasForm;
 import org.example.view.ReceitasPorClienteForm;
 
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.util.List;
@@ -36,7 +37,10 @@ public class ReceitasPorClienteController extends AbstractController<Receita> {
         this.c = c;
 
         loadReceitas();
-      
+
+        if(viewLista.getTblReceitas().getRowCount() == 0){
+            viewLista.getBtnVisualizar().setEnabled(false);
+        }
 
         viewLista.getBtnNovo().addActionListener((ActionEvent e) -> {
             viewLista.dispose();

@@ -43,10 +43,14 @@ public class ListagemProdutoController extends AbstractController<Produto> {
         }
         
         view.getTblProdutos().setModel(model);
+
         
-         if(view.getTblProdutos().getRowCount() > 0)
-            view.getTblProdutos().changeSelection(0, 0, false, false);
-        
+         if(view.getTblProdutos().getRowCount() > 0){
+             view.getTblProdutos().changeSelection(0, 0, false, false);
+         }else{
+             view.getBtnVisualizar().setEnabled(false);
+         }
+
         view.getBtnVisualizar().addActionListener((ActionEvent e) -> {
             new CadastroProdutoController(lista.get(view.getTblProdutos().getSelectedRow()));
             view.dispose();
